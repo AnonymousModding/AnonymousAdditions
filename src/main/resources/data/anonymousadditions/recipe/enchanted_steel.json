@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "category": "misc",
+  "template": {
+    "item": "minecraft:experience_bottle"
+  },
+  "base": {
+    "item": "minecraft:iron_ingot"
+  },
+  "addition": {
+    "item": "anonymousadditions:enchanted_cluster"
+  },
+  "result": {
+    "id": "anonymousadditions:enchanted_steel",
+    "count": 1
+  }
+}
