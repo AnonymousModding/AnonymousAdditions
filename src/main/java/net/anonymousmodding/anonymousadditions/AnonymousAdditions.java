@@ -1,6 +1,8 @@
 package net.anonymousmodding.anonymousadditions;
 
 import com.mojang.logging.LogUtils;
+import net.anonymousmodding.anonymousadditions.block.ModBlocks;
+import net.anonymousmodding.anonymousadditions.item.AdditionsTab;
 import net.anonymousmodding.anonymousadditions.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,6 +38,8 @@ public class AnonymousAdditions
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        AdditionsTab.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
         // Register the item to a creative tab
@@ -50,10 +54,6 @@ public class AnonymousAdditions
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ENCHANTED_SHARDS);
-            event.accept(ModItems.ENCHANTED_CLUSTER);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
