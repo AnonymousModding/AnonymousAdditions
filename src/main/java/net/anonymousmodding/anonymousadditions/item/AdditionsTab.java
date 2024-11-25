@@ -20,6 +20,7 @@ public class AdditionsTab {
                 output.accept(ModItems.ENCHANTED_SHARD.get());
                 output.accept(ModItems.ENCHANTED_CLUSTER.get());
                 output.accept(ModBlocks.ENCHANTED_STONE.get());
+                output.accept(ModBlocks.ENCHANTED_DEEPSLATE.get());
             })
             .build());
 

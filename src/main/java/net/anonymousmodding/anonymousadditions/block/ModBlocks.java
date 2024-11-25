@@ -23,6 +23,11 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> ENCHANTED_DEEPSLATE = registerBlock("enchanted_deepslate", () -> new Block(BlockBehaviour.Properties.of()
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.STONE)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
