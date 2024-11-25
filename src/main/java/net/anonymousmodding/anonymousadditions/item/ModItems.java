@@ -15,6 +15,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> ENCHANTED_SHARD = ITEMS.register("enchanted_shard", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final RegistryObject<Item> ENCHANTED_CLUSTER = ITEMS.register("enchanted_cluster", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final RegistryObject<Item> ENCHANTED_STEEL = ITEMS.register("enchanted_steel", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

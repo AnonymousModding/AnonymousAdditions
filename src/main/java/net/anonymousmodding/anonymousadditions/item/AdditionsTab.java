@@ -19,6 +19,8 @@ public class AdditionsTab {
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.ENCHANTED_SHARD.get());
                 output.accept(ModItems.ENCHANTED_CLUSTER.get());
+                output.accept(ModItems.ENCHANTED_STEEL.get());
+
                 output.accept(ModBlocks.ENCHANTED_STONE.get());
                 output.accept(ModBlocks.ENCHANTED_DEEPSLATE.get());
             })
