@@ -14,6 +14,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, AnonymousAdditions.MOD_ID);
 
     public static final RegistryObject<Item> ENCHANTED_SHARDS = ITEMS.register("enchanted_shards", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final RegistryObject<Item> ENCHANTED_CLUSTER = ITEMS.register("enchanted_cluster", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

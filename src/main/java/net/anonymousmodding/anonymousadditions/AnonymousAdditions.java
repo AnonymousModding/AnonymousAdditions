@@ -52,6 +52,7 @@ public class AnonymousAdditions
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENCHANTED_SHARDS);
+            event.accept(ModItems.ENCHANTED_CLUSTER);
         }
     }
 
