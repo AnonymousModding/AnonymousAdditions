@@ -1,7 +1,9 @@
 package net.anonymousmodding.anonymousadditions.block;
 
 import net.anonymousmodding.anonymousadditions.AnonymousAdditions;
+import net.anonymousmodding.anonymousadditions.block.custom.TinkererWorkbenchBlock;
 import net.anonymousmodding.anonymousadditions.item.ModItems;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -29,6 +31,10 @@ public class ModBlocks {
             .strength(4.5f)
             .requiresCorrectToolForDrops()
             .sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> TINKERER_WORKBENCH = registerBlock("tinkerer_workbench", () -> new TinkererWorkbenchBlock(BlockBehaviour.Properties.of()
+            .strength(2.0f, 3.0f)
+            .sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

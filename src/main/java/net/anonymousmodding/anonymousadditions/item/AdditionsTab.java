@@ -24,6 +24,7 @@ public class AdditionsTab {
 
                 output.accept(ModBlocks.ENCHANTED_STONE.get());
                 output.accept(ModBlocks.ENCHANTED_DEEPSLATE.get());
+                output.accept(ModBlocks.TINKERER_WORKBENCH.get());
             })
             .build());
 
