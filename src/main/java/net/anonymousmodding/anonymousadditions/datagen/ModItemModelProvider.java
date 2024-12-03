@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ENCHANTED_STEEL.get());
         basicItem(ModItems.MAGIC_MIRROR.get());
         basicItem(ModItems.FLAMING_EMBERS.get());
+        basicItem(ModItems.CLOUD_IN_A_BOTTLE.get());
 
     }
 }

@@ -28,6 +28,8 @@ public class AdditionsTab {
 
                 output.accept(ModItems.FLAMING_EMBERS.get());
                 output.accept(ModBlocks.FLAMING_EMBERS_ORE.get());
+
+                output.accept(ModItems.CLOUD_IN_A_BOTTLE.get());
             })
             .build());
 
