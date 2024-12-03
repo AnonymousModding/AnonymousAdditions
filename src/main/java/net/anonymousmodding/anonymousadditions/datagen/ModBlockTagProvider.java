@@ -20,7 +20,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.ENCHANTED_DEEPSLATE.get())
-                .add(ModBlocks.ENCHANTED_STONE.get());
+                .add(ModBlocks.ENCHANTED_STONE.get())
+                .add(ModBlocks.FLAMING_EMBERS_ORE.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.TINKERER_WORKBENCH.get());
@@ -28,5 +29,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ENCHANTED_STONE.get())
                 .add(ModBlocks.ENCHANTED_DEEPSLATE.get());
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.FLAMING_EMBERS_ORE.get());
     }
 }

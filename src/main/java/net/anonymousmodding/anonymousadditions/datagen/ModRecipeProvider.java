@@ -30,6 +30,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.ENCHANTED_SHARD.get())
                 .unlockedBy(getHasName(ModItems.ENCHANTED_SHARD.get()), has(ModItems.ENCHANTED_SHARD.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FLAMING_EMBERS_ORE.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.FLAMING_EMBERS.get())
+                .unlockedBy(getHasName(ModItems.FLAMING_EMBERS.get()), has(ModItems.FLAMING_EMBERS.get())).save(pRecipeOutput);
+
         oreSmelting(pRecipeOutput, ENCHANTED_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.ENCHANTED_SHARD.get(), 0.50f, 200, "enchanted_shard");
         oreBlasting(pRecipeOutput, ENCHANTED_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.ENCHANTED_SHARD.get(), 0.25f, 100, "enchanted_shard");
 

@@ -36,6 +36,11 @@ public class ModBlocks {
             .strength(2.0f, 3.0f)
             .sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> FLAMING_EMBERS_ORE = registerBlock("flaming_embers_ore", () -> new DropExperienceBlock(UniformInt.of(1, 3), BlockBehaviour.Properties.of()
+            .strength(2.5f)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.NETHERRACK)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

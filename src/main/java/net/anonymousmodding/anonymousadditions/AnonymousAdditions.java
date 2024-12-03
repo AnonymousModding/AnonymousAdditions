@@ -42,6 +42,8 @@ public class AnonymousAdditions
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
+
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 

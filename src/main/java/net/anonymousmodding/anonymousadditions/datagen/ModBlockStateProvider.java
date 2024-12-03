@@ -18,6 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.ENCHANTED_STONE);
         blockWithItem(ModBlocks.ENCHANTED_DEEPSLATE);
+        blockWithItem(ModBlocks.FLAMING_EMBERS_ORE);
         horizontalBlockWithItem(
                 ModBlocks.TINKERER_WORKBENCH,
                 "tinkerer_workbench_side",

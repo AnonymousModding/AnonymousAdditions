@@ -25,6 +25,9 @@ public class AdditionsTab {
                 output.accept(ModBlocks.ENCHANTED_STONE.get());
                 output.accept(ModBlocks.ENCHANTED_DEEPSLATE.get());
                 output.accept(ModBlocks.TINKERER_WORKBENCH.get());
+
+                output.accept(ModItems.FLAMING_EMBERS.get());
+                output.accept(ModBlocks.FLAMING_EMBERS_ORE.get());
             })
             .build());
 

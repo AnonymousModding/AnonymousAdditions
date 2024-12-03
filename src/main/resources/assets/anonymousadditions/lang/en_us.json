@@ -6,5 +6,7 @@
   "block.anonymousadditions.enchanted_stone": "Enchanted Stone",
   "block.anonymousadditions.enchanted_deepslate": "Enchanted Deepslate",
   "item.anonymousadditions.magic_mirror": "Magic Mirror",
-  "block.anonymousadditions.tinkerer_workbench": "Tinkerer's Workbench"
+  "block.anonymousadditions.tinkerer_workbench": "Tinkerer's Workbench",
+  "block.anonymousadditions.flaming_embers_ore": "Netherrack Embers",
+  "item.anonymousadditions.flaming_embers": "Flaming Embers"
 }
