@@ -21,6 +21,8 @@ public class ModItems {
     public static final RegistryObject<Item> MAGIC_MIRROR = ITEMS.register("magic_mirror", () -> new MagicMirrorItem(new Item.Properties().durability(32)));
     public static final RegistryObject<Item> FLAMING_EMBERS = ITEMS.register("flaming_embers", () -> new FuelItem(new Item.Properties(), 500));
     public static final RegistryObject<Item> CLOUD_IN_A_BOTTLE = ITEMS.register("cloud_in_a_bottle", () -> new CloudInABottleItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RAW_RUBY = ITEMS.register("raw_ruby", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> POLISHED_RUBY = ITEMS.register("polished_ruby", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

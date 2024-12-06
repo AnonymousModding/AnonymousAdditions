@@ -16,15 +16,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
         blockWithItem(ModBlocks.ENCHANTED_STONE);
+
         blockWithItem(ModBlocks.ENCHANTED_DEEPSLATE);
+
         blockWithItem(ModBlocks.FLAMING_EMBERS_ORE);
+
+        blockWithItem(ModBlocks.BUDDING_RUBY);
+
+        blockWithItem(ModBlocks.RUBY_BLOCK);
+
         horizontalBlockWithItem(
                 ModBlocks.TINKERER_WORKBENCH,
                 "tinkerer_workbench_side",
                 "tinkerer_workbench_front",
                 "tinkerer_workbench_top"
         );
+
+        budBlockWithItem(ModBlocks.SMALL_RUBY_BUD.get(), "small_ruby_bud");
+
+        budBlockWithItem(ModBlocks.MEDIUM_RUBY_BUD.get(), "medium_ruby_bud");
+
+        budBlockWithItem(ModBlocks.LARGE_RUBY_BUD.get(), "large_ruby_bud");
+
+        budBlockWithItem(ModBlocks.RUBY_CLUSTER.get(), "ruby_cluster");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -42,6 +58,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 )
         );
     }
+
+    private void budBlockWithItem(Block block, String modelName) {
+        directionalBlock(block, models().cross(modelName, modLoc("block/" + modelName)).renderType("cutout"));
+        itemModels().getBuilder(modelName).parent(models().getExistingFile(modLoc("block/" + modelName)));
+    }
+
 }
 
 

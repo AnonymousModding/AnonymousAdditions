@@ -8,9 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -19,6 +17,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ENCHANTED_STONE_PLACED_KEY = registerKey("enchanted_stone_placed");
     public static final ResourceKey<PlacedFeature> ENCHANTED_DEEPSLATE_PLACED_KEY = registerKey("enchanted_deepslate_placed");
     public static final ResourceKey<PlacedFeature> FLAMING_EMBERS_ORE_PLACED_KEY = registerKey("flaming_embers_ore_placed");
+    public static final ResourceKey<PlacedFeature> RUBY_GEODE_PLACED_KEY = registerKey("ruby_geode_placed");
 
 
 
@@ -34,6 +33,8 @@ public class ModPlacedFeatures {
         register(context, FLAMING_EMBERS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FLAMING_EMBERS_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.top())));
 
+        register(context, RUBY_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBY_GEODE_KEY), List.of(RarityFilter.onAverageOnceEvery(24),
+                InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(0)), BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

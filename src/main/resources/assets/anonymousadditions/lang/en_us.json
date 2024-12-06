@@ -9,5 +9,13 @@
   "block.anonymousadditions.tinkerer_workbench": "Tinkerer's Workbench",
   "block.anonymousadditions.flaming_embers_ore": "Netherrack Embers",
   "item.anonymousadditions.flaming_embers": "Flaming Embers",
-  "item.anonymousadditions.cloud_in_a_bottle": "Cloud In A Bottle"
+  "item.anonymousadditions.cloud_in_a_bottle": "Cloud In A Bottle",
+  "item.anonymousadditions.raw_ruby": "Raw Ruby",
+  "item.anonymousadditions.polished_ruby": "Polished Ruby",
+  "block.anonymousadditions.budding_ruby": "Budding Ruby",
+  "block.anonymousadditions.ruby_block": "Block of Ruby",
+  "block.anonymousadditions.small_ruby_bud": "Small Ruby Bud",
+  "block.anonymousadditions.medium_ruby_bud": "Medium Ruby Bud",
+  "block.anonymousadditions.large_ruby_bud": "Large Ruby Bud",
+  "block.anonymousadditions.ruby_cluster": "Ruby Cluster"
 }

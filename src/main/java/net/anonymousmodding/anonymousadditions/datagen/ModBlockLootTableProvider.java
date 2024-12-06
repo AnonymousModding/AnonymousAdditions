@@ -32,6 +32,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.ENCHANTED_STONE.get(), block -> createOreDrop(ModBlocks.ENCHANTED_STONE.get(), ModItems.ENCHANTED_SHARD.get()));
         this.add(ModBlocks.ENCHANTED_DEEPSLATE.get(), block -> createOreDrop(ModBlocks.ENCHANTED_DEEPSLATE.get(), ModItems.ENCHANTED_SHARD.get()));
         this.add(ModBlocks.FLAMING_EMBERS_ORE.get(), block -> createMultipleOresDrop(ModBlocks.FLAMING_EMBERS_ORE.get(), ModItems.FLAMING_EMBERS.get(), 2, 5));
+        dropSelf(ModBlocks.RUBY_BLOCK.get());
+        this.add(ModBlocks.BUDDING_RUBY.get(), block -> noDrop());
+        this.add(ModBlocks.SMALL_RUBY_BUD.get(), block -> noDrop());
+        this.add(ModBlocks.MEDIUM_RUBY_BUD.get(), block -> noDrop());
+        this.add(ModBlocks.LARGE_RUBY_BUD.get(), block -> noDrop());
+        dropOther(ModBlocks.RUBY_CLUSTER.get(), ModItems.RAW_RUBY.get());
     }
 
     @Override

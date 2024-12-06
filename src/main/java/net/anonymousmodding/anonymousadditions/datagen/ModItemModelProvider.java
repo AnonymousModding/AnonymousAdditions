@@ -19,6 +19,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MAGIC_MIRROR.get());
         basicItem(ModItems.FLAMING_EMBERS.get());
         basicItem(ModItems.CLOUD_IN_A_BOTTLE.get());
+        basicItem(ModItems.RAW_RUBY.get());
+        basicItem(ModItems.POLISHED_RUBY.get());
 
     }
 }

@@ -21,7 +21,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.ENCHANTED_DEEPSLATE.get())
                 .add(ModBlocks.ENCHANTED_STONE.get())
-                .add(ModBlocks.FLAMING_EMBERS_ORE.get());
+                .add(ModBlocks.FLAMING_EMBERS_ORE.get())
+                .add(ModBlocks.RUBY_BLOCK.get())
+                .add(ModBlocks.BUDDING_RUBY.get());
+
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.TINKERER_WORKBENCH.get());
@@ -31,6 +34,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ENCHANTED_DEEPSLATE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.FLAMING_EMBERS_ORE.get());
+                .add(ModBlocks.FLAMING_EMBERS_ORE.get())
+                .add(ModBlocks.BUDDING_RUBY.get())
+                .add(ModBlocks.RUBY_BLOCK.get());
     }
 }
