@@ -14,26 +14,18 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> ENCHANTED_STONE_PLACED_KEY = registerKey("enchanted_stone_placed");
-    public static final ResourceKey<PlacedFeature> ENCHANTED_DEEPSLATE_PLACED_KEY = registerKey("enchanted_deepslate_placed");
     public static final ResourceKey<PlacedFeature> FLAMING_EMBERS_ORE_PLACED_KEY = registerKey("flaming_embers_ore_placed");
-    public static final ResourceKey<PlacedFeature> RUBY_GEODE_PLACED_KEY = registerKey("ruby_geode_placed");
+    public static final ResourceKey<PlacedFeature> ENCHANTED_CRYSTAL_GEODE_PLACED_KEY = registerKey("enchanted_crystal_geode_placed");
 
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, ENCHANTED_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_STONE_KEY),
-                ModOrePlacement.commonOrePlacement(5, HeightRangePlacement.uniform(VerticalAnchor.absolute(80), VerticalAnchor.absolute(256))));
-
-        register(context, ENCHANTED_DEEPSLATE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_DEEPSLATE_KEY),
-                ModOrePlacement.commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(-64))));
-
         register(context, FLAMING_EMBERS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FLAMING_EMBERS_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.top())));
 
-        register(context, RUBY_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBY_GEODE_KEY), List.of(RarityFilter.onAverageOnceEvery(24),
+        register(context, ENCHANTED_CRYSTAL_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_CRYSTAL_GEODE_KEY), List.of(RarityFilter.onAverageOnceEvery(24),
                 InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(0)), BiomeFilter.biome()));
     }
 

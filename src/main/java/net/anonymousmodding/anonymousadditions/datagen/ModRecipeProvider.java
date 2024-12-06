@@ -22,13 +22,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
-        List<ItemLike> ENCHANTED_SHARD_SMELTABLES = List.of(ModBlocks.ENCHANTED_STONE.get(), ModBlocks.ENCHANTED_DEEPSLATE.get());
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENCHANTED_CLUSTER.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENCHANTED_CRYSTAL.get())
                 .pattern("##")
                 .pattern("##")
-                .define('#', ModItems.ENCHANTED_SHARD.get())
-                .unlockedBy(getHasName(ModItems.ENCHANTED_SHARD.get()), has(ModItems.ENCHANTED_SHARD.get())).save(pRecipeOutput);
+                .define('#', ModItems.ENCHANTED_CRYSTAL_SHARD.get())
+                .unlockedBy(getHasName(ModItems.ENCHANTED_CRYSTAL_SHARD.get()), has(ModItems.ENCHANTED_CRYSTAL_SHARD.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FLAMING_EMBERS_ORE.get())
                 .pattern("###")
@@ -37,10 +35,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.FLAMING_EMBERS.get())
                 .unlockedBy(getHasName(ModItems.FLAMING_EMBERS.get()), has(ModItems.FLAMING_EMBERS.get())).save(pRecipeOutput);
 
-        oreSmelting(pRecipeOutput, ENCHANTED_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.ENCHANTED_SHARD.get(), 0.50f, 200, "enchanted_shard");
-        oreBlasting(pRecipeOutput, ENCHANTED_SHARD_SMELTABLES, RecipeCategory.MISC, ModItems.ENCHANTED_SHARD.get(), 0.25f, 100, "enchanted_shard");
 
-        smithingRecipe(pRecipeOutput, RecipeCategory.MISC, ModItems.ENCHANTED_CLUSTER.get(), Items.IRON_INGOT, Items.EXPERIENCE_BOTTLE, ModItems.ENCHANTED_STEEL.get(), "enchanted_steel");
+        smithingRecipe(pRecipeOutput, RecipeCategory.MISC, ModItems.ENCHANTED_CRYSTAL.get(), Items.IRON_INGOT, Items.EXPERIENCE_BOTTLE, ModItems.ENCHANTED_STEEL.get(), "enchanted_steel");
 
     }
 

@@ -14,10 +14,9 @@ import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_ENCHANTED_STONE = registerKey("add_enchanted_stone");
-    public static final ResourceKey<BiomeModifier> ADD_ENCHANTED_DEEPSLATE = registerKey("add_enchanted_deepslate");
+
     public static final ResourceKey<BiomeModifier> ADD_FLAMING_EMBERS_ORE = registerKey("add_flaming_embers_ore");
-    public static final ResourceKey<BiomeModifier> ADD_RUBY_GEODE = registerKey("add_ruby_geode");
+    public static final ResourceKey<BiomeModifier> ADD_ENCHANTED_CRYSTAL_GEODE = registerKey("add_enchanted_crystal_geode");
 
 
 
@@ -25,21 +24,13 @@ public class ModBiomeModifiers {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_ENCHANTED_STONE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_MOUNTAIN), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ENCHANTED_STONE_PLACED_KEY)),
-                GenerationStep.Decoration.RAW_GENERATION));
-
-        context.register(ADD_ENCHANTED_DEEPSLATE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ENCHANTED_DEEPSLATE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
         context.register(ADD_FLAMING_EMBERS_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.FLAMING_EMBERS_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_RUBY_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_ENCHANTED_CRYSTAL_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.RUBY_GEODE_PLACED_KEY)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ENCHANTED_CRYSTAL_GEODE_PLACED_KEY)),
                 GenerationStep.Decoration.LOCAL_MODIFICATIONS));
     }
 

@@ -15,8 +15,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AnonymousAdditions.MOD_ID);
 
-    public static final RegistryObject<Item> ENCHANTED_SHARD = ITEMS.register("enchanted_shard", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
-    public static final RegistryObject<Item> ENCHANTED_CLUSTER = ITEMS.register("enchanted_cluster", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final RegistryObject<Item> ENCHANTED_CRYSTAL_SHARD = ITEMS.register("enchanted_crystal_shard", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final RegistryObject<Item> ENCHANTED_CRYSTAL = ITEMS.register("enchanted_crystal", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final RegistryObject<Item> ENCHANTED_STEEL = ITEMS.register("enchanted_steel", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final RegistryObject<Item> MAGIC_MIRROR = ITEMS.register("magic_mirror", () -> new MagicMirrorItem(new Item.Properties().durability(32)));
     public static final RegistryObject<Item> FLAMING_EMBERS = ITEMS.register("flaming_embers", () -> new FuelItem(new Item.Properties(), 500));

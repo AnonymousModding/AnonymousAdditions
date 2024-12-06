@@ -19,23 +19,27 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ENCHANTED_DEEPSLATE.get())
-                .add(ModBlocks.ENCHANTED_STONE.get())
                 .add(ModBlocks.FLAMING_EMBERS_ORE.get())
-                .add(ModBlocks.RUBY_BLOCK.get())
-                .add(ModBlocks.BUDDING_RUBY.get());
+                .add(ModBlocks.ENCHANTED_CRYSTAL_BLOCK.get())
+                .add(ModBlocks.BUDDING_ENCHANTED_CRYSTAL.get())
+                .add(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.ENCHANTED_CLUSTER.get());
 
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.TINKERER_WORKBENCH.get());
 
-        tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.ENCHANTED_STONE.get())
-                .add(ModBlocks.ENCHANTED_DEEPSLATE.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLAMING_EMBERS_ORE.get())
-                .add(ModBlocks.BUDDING_RUBY.get())
-                .add(ModBlocks.RUBY_BLOCK.get());
+                .add(ModBlocks.ENCHANTED_CRYSTAL_BLOCK.get())
+                .add(ModBlocks.BUDDING_ENCHANTED_CRYSTAL.get())
+                .add(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get())
+                .add(ModBlocks.ENCHANTED_CLUSTER.get());
     }
 }

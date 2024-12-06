@@ -1,7 +1,7 @@
 {
   "creativetab.anonymousadditions.anonymous_additions": "Anonymous Additions",
-  "item.anonymousadditions.enchanted_shard": "Enchanted Shard",
-  "item.anonymousadditions.enchanted_cluster": "Enchanted Cluster",
+  "item.anonymousadditions.enchanted_crystal_shard": "Enchanted Crystal Shard",
+  "item.anonymousadditions.enchanted_crystal": "Enchanted Crystal",
   "item.anonymousadditions.enchanted_steel": "Enchanted Steel",
   "block.anonymousadditions.enchanted_stone": "Enchanted Stone",
   "block.anonymousadditions.enchanted_deepslate": "Enchanted Deepslate",
@@ -12,10 +12,10 @@
   "item.anonymousadditions.cloud_in_a_bottle": "Cloud In A Bottle",
   "item.anonymousadditions.raw_ruby": "Raw Ruby",
   "item.anonymousadditions.polished_ruby": "Polished Ruby",
-  "block.anonymousadditions.budding_ruby": "Budding Ruby",
-  "block.anonymousadditions.ruby_block": "Block of Ruby",
-  "block.anonymousadditions.small_ruby_bud": "Small Ruby Bud",
-  "block.anonymousadditions.medium_ruby_bud": "Medium Ruby Bud",
-  "block.anonymousadditions.large_ruby_bud": "Large Ruby Bud",
-  "block.anonymousadditions.ruby_cluster": "Ruby Cluster"
+  "block.anonymousadditions.small_enchanted_cluster_bud": "Small Enchanted Bud",
+  "block.anonymousadditions.medium_enchanted_cluster_bud": "Medium Enchanted Bud",
+  "block.anonymousadditions.large_enchanted_cluster_bud": "Large Enchanted Bud",
+  "block.anonymousadditions.enchanted_cluster": "Enchanted Cluster",
+  "block.anonymousadditions.enchanted_crystal_block": "Block of Enchanted Crystal",
+  "block.anonymousadditions.budding_enchanted_crystal": "Budding Enchanted Crystal"
 }

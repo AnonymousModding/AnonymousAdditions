@@ -13,8 +13,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.ENCHANTED_SHARD.get());
-        basicItem(ModItems.ENCHANTED_CLUSTER.get());
+        basicItem(ModItems.ENCHANTED_CRYSTAL_SHARD.get());
+        basicItem(ModItems.ENCHANTED_CRYSTAL.get());
         basicItem(ModItems.ENCHANTED_STEEL.get());
         basicItem(ModItems.MAGIC_MIRROR.get());
         basicItem(ModItems.FLAMING_EMBERS.get());

@@ -10,11 +10,11 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 
-public class BuddingRubyBlock extends AmethystBlock {
+public class BuddingEnchantedCrystalBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingRubyBlock(BlockBehaviour.Properties pProperties) {
+    public BuddingEnchantedCrystalBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
     }
 
@@ -25,13 +25,13 @@ public class BuddingRubyBlock extends AmethystBlock {
             BlockState $$6 = pLevel.getBlockState($$5);
             Block newBlock = null;
             if (canClusterGrowAtState($$6)) {
-                newBlock = ModBlocks.SMALL_RUBY_BUD.get();
-            } else if ($$6.is(ModBlocks.SMALL_RUBY_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
-                newBlock = ModBlocks.MEDIUM_RUBY_BUD.get();
-            } else if ($$6.is(ModBlocks.MEDIUM_RUBY_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
-                newBlock = ModBlocks.LARGE_RUBY_BUD.get();
-            } else if ($$6.is(ModBlocks.LARGE_RUBY_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
-                newBlock = ModBlocks.RUBY_CLUSTER.get();
+                newBlock = ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get();
+            } else if ($$6.is(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
+                newBlock = ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get();
+            } else if ($$6.is(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
+                newBlock = ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get();
+            } else if ($$6.is(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get()) && $$6.getValue(AmethystClusterBlock.FACING) == $$4) {
+                newBlock = ModBlocks.ENCHANTED_CLUSTER.get();
             }
 
             if (newBlock != null) {

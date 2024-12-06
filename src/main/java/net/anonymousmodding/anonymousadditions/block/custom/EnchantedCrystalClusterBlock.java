@@ -26,7 +26,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class RubyClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
+public class EnchantedCrystalClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED;
     public static final DirectionProperty FACING;
     protected final VoxelShape northAabb;
@@ -36,7 +36,7 @@ public class RubyClusterBlock extends AmethystBlock implements SimpleWaterlogged
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public RubyClusterBlock(int pSize, int pOffset, BlockBehaviour.Properties pProperties) {
+    public EnchantedCrystalClusterBlock(int pSize, int pOffset, BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState((BlockState) ((BlockState) this.defaultBlockState().setValue(WATERLOGGED, false))
                 .setValue(FACING, Direction.UP));

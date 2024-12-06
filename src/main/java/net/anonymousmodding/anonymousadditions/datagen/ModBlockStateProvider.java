@@ -17,15 +17,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        blockWithItem(ModBlocks.ENCHANTED_STONE);
-
-        blockWithItem(ModBlocks.ENCHANTED_DEEPSLATE);
-
         blockWithItem(ModBlocks.FLAMING_EMBERS_ORE);
 
-        blockWithItem(ModBlocks.BUDDING_RUBY);
+        blockWithItem(ModBlocks.BUDDING_ENCHANTED_CRYSTAL);
 
-        blockWithItem(ModBlocks.RUBY_BLOCK);
+        blockWithItem(ModBlocks.ENCHANTED_CRYSTAL_BLOCK);
 
         horizontalBlockWithItem(
                 ModBlocks.TINKERER_WORKBENCH,
@@ -34,13 +30,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 "tinkerer_workbench_top"
         );
 
-        budBlockWithItem(ModBlocks.SMALL_RUBY_BUD.get(), "small_ruby_bud");
+        budBlockWithItem(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get(), "small_enchanted_cluster_bud");
 
-        budBlockWithItem(ModBlocks.MEDIUM_RUBY_BUD.get(), "medium_ruby_bud");
+        budBlockWithItem(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get(), "medium_enchanted_cluster_bud");
 
-        budBlockWithItem(ModBlocks.LARGE_RUBY_BUD.get(), "large_ruby_bud");
+        budBlockWithItem(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get(), "large_enchanted_cluster_bud");
 
-        budBlockWithItem(ModBlocks.RUBY_CLUSTER.get(), "ruby_cluster");
+        budBlockWithItem(ModBlocks.ENCHANTED_CLUSTER.get(), "enchanted_cluster");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
