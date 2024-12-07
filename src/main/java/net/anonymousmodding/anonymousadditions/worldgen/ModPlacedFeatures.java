@@ -20,6 +20,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> STONE_RUBY_PLACED_KEY = registerKey("stone_ruby_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_RUBY_PLACED_KEY = registerKey("deepslate_ruby_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_SAPPHIRE_PLACED_KEY = registerKey("deepslate_sapphire_placed");
+    public static final ResourceKey<PlacedFeature> STONE_TOPAZ_PLACED_KEY = registerKey("stone_topaz_placed");
+    public static final ResourceKey<PlacedFeature> DEEPSLATE_TOPAZ_PLACED_KEY = registerKey("deepslate_topaz_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -37,6 +39,12 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.absolute(5))));
 
         register(context, DEEPSLATE_SAPPHIRE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_SAPPHIRE_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.absolute(5))));
+
+        register(context, STONE_TOPAZ_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STONE_TOPAZ_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(50))));
+
+        register(context, DEEPSLATE_TOPAZ_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_TOPAZ_KEY),
                 ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.absolute(5))));
 
         register(context, ENCHANTED_CRYSTAL_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_CRYSTAL_GEODE_KEY), List.of(RarityFilter.onAverageOnceEvery(24),

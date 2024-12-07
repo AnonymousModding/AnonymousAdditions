@@ -51,6 +51,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.RUBY_STONE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_STONE_GEM.get(), ModItems.RAW_RUBY.get()));
 
         this.add(ModBlocks.RUBY_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_DEEPSLATE_GEM.get(), ModItems.RAW_RUBY.get()));
+
+        this.add(ModBlocks.TOPAZ_STONE_GEM.get(), block -> createOreDrop(ModBlocks.TOPAZ_STONE_GEM.get(), ModItems.RAW_TOPAZ.get()));
+
+        this.add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.TOPAZ_DEEPSLATE_GEM.get(), ModItems.RAW_TOPAZ.get()));
     }
 
     @Override

@@ -25,6 +25,8 @@ public class ModItems {
     public static final RegistryObject<Item> POLISHED_RUBY = ITEMS.register("polished_ruby", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_SAPPHIRE = ITEMS.register("polished_sapphire", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_TOPAZ = ITEMS.register("raw_topaz", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> POLISHED_TOPAZ = ITEMS.register("polished_topaz", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

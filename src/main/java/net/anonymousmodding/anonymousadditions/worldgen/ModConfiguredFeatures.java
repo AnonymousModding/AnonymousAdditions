@@ -33,8 +33,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_RUBY_KEY = registerKey("stone_ruby");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_SAPPHIRE_KEY = registerKey("deepslate_sapphire");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_RUBY_KEY = registerKey("deepslate_ruby");
-
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_TOPAZ_KEY = registerKey("deepslate_topaz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_TOPAZ_KEY = registerKey("stone_topaz");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -49,6 +49,11 @@ public class ModConfiguredFeatures {
         register(context, DEEPSLATE_RUBY_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables, ModBlocks.RUBY_DEEPSLATE_GEM.get().defaultBlockState(), 4));
 
         register(context, DEEPSLATE_SAPPHIRE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables, ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get().defaultBlockState(), 4));
+
+        register(context, DEEPSLATE_TOPAZ_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables, ModBlocks.TOPAZ_DEEPSLATE_GEM.get().defaultBlockState(), 4));
+
+        register(context, STONE_TOPAZ_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables, ModBlocks.TOPAZ_STONE_GEM.get().defaultBlockState(), 4));
+
 
         register(context, FLAMING_EMBERS_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.FLAMING_EMBERS_ORE.get().defaultBlockState(), 12));
 

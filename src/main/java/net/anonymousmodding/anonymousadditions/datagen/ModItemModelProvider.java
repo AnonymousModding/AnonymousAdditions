@@ -23,5 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.POLISHED_RUBY.get());
         basicItem(ModItems.RAW_SAPPHIRE.get());
         basicItem(ModItems.POLISHED_SAPPHIRE.get());
+        basicItem(ModItems.RAW_TOPAZ.get());
+        basicItem(ModItems.POLISHED_TOPAZ.get());
     }
 }

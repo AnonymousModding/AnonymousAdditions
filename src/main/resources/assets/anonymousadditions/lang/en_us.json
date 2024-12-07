@@ -21,5 +21,9 @@
   "block.anonymousadditions.sapphire_stone_gem": "Stone Sapphire Gem",
   "block.anonymousadditions.sapphire_deepslate_gem": "Deepslate Sapphire Gem",
   "block.anonymousadditions.ruby_stone_gem": "Stone Ruby Gem",
-  "block.anonymousadditions.ruby_deepslate_gem": "Deepslate Ruby Gem"
+  "block.anonymousadditions.ruby_deepslate_gem": "Deepslate Ruby Gem",
+  "block.anonymousadditions.topaz_stone_gem": "Stone Topaz Gem",
+  "block.anonymousadditions.topaz_deepslate_gem": "Deepslate Topaz Gem",
+  "item.anonymousadditions.raw_topaz": "Raw Topaz",
+  "item.anonymousadditions.polished_topaz": "Polished Topaz"
 }

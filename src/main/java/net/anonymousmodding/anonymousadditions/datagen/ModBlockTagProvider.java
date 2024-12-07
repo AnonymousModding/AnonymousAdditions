@@ -29,7 +29,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUBY_DEEPSLATE_GEM.get())
                 .add(ModBlocks.RUBY_STONE_GEM.get())
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get())
-                .add(ModBlocks.SAPPHIRE_STONE_GEM.get());
+                .add(ModBlocks.SAPPHIRE_STONE_GEM.get())
+                .add(ModBlocks.TOPAZ_STONE_GEM.get())
+                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
 
 
         tag(BlockTags.MINEABLE_WITH_AXE)
@@ -39,7 +41,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUBY_DEEPSLATE_GEM.get())
                 .add(ModBlocks.RUBY_STONE_GEM.get())
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get())
-                .add(ModBlocks.SAPPHIRE_STONE_GEM.get());
+                .add(ModBlocks.SAPPHIRE_STONE_GEM.get())
+                .add(ModBlocks.TOPAZ_STONE_GEM.get())
+                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLAMING_EMBERS_ORE.get())

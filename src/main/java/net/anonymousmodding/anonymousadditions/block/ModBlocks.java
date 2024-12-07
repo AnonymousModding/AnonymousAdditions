@@ -71,6 +71,12 @@ public class ModBlocks {
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> TOPAZ_STONE_GEM = registerBlock("topaz_stone_gem",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(4.0f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> RUBY_DEEPSLATE_GEM = registerBlock("ruby_deepslate_gem",
             () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
                     .strength(4.5f)
@@ -78,6 +84,12 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SAPPHIRE_DEEPSLATE_GEM = registerBlock("sapphire_deepslate_gem",
+            () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TOPAZ_DEEPSLATE_GEM = registerBlock("topaz_deepslate_gem",
             () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
                     .strength(4.5f)
                     .sound(SoundType.DEEPSLATE)

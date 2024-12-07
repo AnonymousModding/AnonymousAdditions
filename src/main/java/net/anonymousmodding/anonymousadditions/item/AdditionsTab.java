@@ -26,6 +26,8 @@ public class AdditionsTab {
                 output.accept(ModItems.POLISHED_RUBY.get());
                 output.accept(ModItems.RAW_SAPPHIRE.get());
                 output.accept(ModItems.POLISHED_SAPPHIRE.get());
+                output.accept(ModItems.RAW_TOPAZ.get());
+                output.accept(ModItems.POLISHED_TOPAZ.get());
 
                 // ACCESSORIES
                 output.accept(ModItems.MAGIC_MIRROR.get());
@@ -44,6 +46,8 @@ public class AdditionsTab {
                 output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get());
                 output.accept(ModBlocks.RUBY_STONE_GEM.get());
                 output.accept(ModBlocks.RUBY_DEEPSLATE_GEM.get());
+                output.accept(ModBlocks.TOPAZ_STONE_GEM.get());
+                output.accept(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
 
             })
             .build());

@@ -31,6 +31,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_GEM);
 
+        blockWithItem(ModBlocks.TOPAZ_STONE_GEM);
+
+        blockWithItem(ModBlocks.TOPAZ_DEEPSLATE_GEM);
+
         horizontalBlockWithItem(
                 ModBlocks.TINKERER_WORKBENCH,
                 "tinkerer_workbench_side",

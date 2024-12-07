@@ -28,6 +28,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get(),
                 ModBlocks.SAPPHIRE_STONE_GEM.get(), ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get());
 
+        List<ItemLike> TOPAZ_SMELTABLES = List.of(ModItems.RAW_TOPAZ.get(),
+                ModBlocks.TOPAZ_STONE_GEM.get(), ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENCHANTED_CRYSTAL.get())
                 .pattern("##")
                 .pattern("##")
@@ -49,6 +52,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 0.25f, 200, "raw_sapphire");
         oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 0.25f, 100, "raw_sapphire");
+
+        oreSmelting(pRecipeOutput, TOPAZ_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_TOPAZ.get(), 0.25f, 200, "raw_topaz");
+        oreBlasting(pRecipeOutput, TOPAZ_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_TOPAZ.get(), 0.25f, 100, "raw_topaz");
     }
 
     // MAKE SURE FILES ARE GENERATED IN THE RIGHT PLACE
