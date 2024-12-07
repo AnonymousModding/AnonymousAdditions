@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CLOUD_IN_A_BOTTLE.get());
         basicItem(ModItems.RAW_RUBY.get());
         basicItem(ModItems.POLISHED_RUBY.get());
-
+        basicItem(ModItems.RAW_SAPPHIRE.get());
+        basicItem(ModItems.POLISHED_SAPPHIRE.get());
     }
 }

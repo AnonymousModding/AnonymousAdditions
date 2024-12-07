@@ -59,6 +59,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_ENCHANTED_CLUSTER_BUD = registerBlock("large_enchanted_cluster_bud",
             () -> new EnchantedCrystalClusterBlock(7, 3, BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.LARGE_AMETHYST_BUD).lightLevel(state -> 4).noOcclusion()));
 
+    public static final RegistryObject<Block> RUBY_STONE_GEM = registerBlock("ruby_stone_gem",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(4.0f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SAPPHIRE_STONE_GEM = registerBlock("sapphire_stone_gem",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(4.0f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RUBY_DEEPSLATE_GEM = registerBlock("ruby_deepslate_gem",
+            () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SAPPHIRE_DEEPSLATE_GEM = registerBlock("sapphire_deepslate_gem",
+            () -> new DropExperienceBlock(UniformInt.of(3,5), BlockBehaviour.Properties.of()
+                    .strength(4.5f)
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

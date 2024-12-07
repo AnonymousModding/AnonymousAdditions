@@ -16,14 +16,28 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> FLAMING_EMBERS_ORE_PLACED_KEY = registerKey("flaming_embers_ore_placed");
     public static final ResourceKey<PlacedFeature> ENCHANTED_CRYSTAL_GEODE_PLACED_KEY = registerKey("enchanted_crystal_geode_placed");
-
-
+    public static final ResourceKey<PlacedFeature> STONE_SAPPHIRE_PLACED_KEY = registerKey("stone_sapphire_placed");
+    public static final ResourceKey<PlacedFeature> STONE_RUBY_PLACED_KEY = registerKey("stone_ruby_placed");
+    public static final ResourceKey<PlacedFeature> DEEPSLATE_RUBY_PLACED_KEY = registerKey("deepslate_ruby_placed");
+    public static final ResourceKey<PlacedFeature> DEEPSLATE_SAPPHIRE_PLACED_KEY = registerKey("deepslate_sapphire_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, FLAMING_EMBERS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FLAMING_EMBERS_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.top())));
+
+        register(context, STONE_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STONE_RUBY_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(50))));
+
+        register(context, STONE_SAPPHIRE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STONE_SAPPHIRE_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(50))));
+
+        register(context, DEEPSLATE_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_RUBY_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.absolute(5))));
+
+        register(context, DEEPSLATE_SAPPHIRE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_SAPPHIRE_KEY),
+                ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.absolute(5))));
 
         register(context, ENCHANTED_CRYSTAL_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_CRYSTAL_GEODE_KEY), List.of(RarityFilter.onAverageOnceEvery(24),
                 InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(0)), BiomeFilter.biome()));

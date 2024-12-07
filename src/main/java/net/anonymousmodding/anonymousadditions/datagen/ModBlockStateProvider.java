@@ -23,6 +23,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.ENCHANTED_CRYSTAL_BLOCK);
 
+        blockWithItem(ModBlocks.SAPPHIRE_STONE_GEM);
+
+        blockWithItem(ModBlocks.SAPPHIRE_DEEPSLATE_GEM);
+
+        blockWithItem(ModBlocks.RUBY_STONE_GEM);
+
+        blockWithItem(ModBlocks.RUBY_DEEPSLATE_GEM);
+
         horizontalBlockWithItem(
                 ModBlocks.TINKERER_WORKBENCH,
                 "tinkerer_workbench_side",

@@ -22,6 +22,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
+        List<ItemLike> RUBY_SMELTABLES = List.of(ModItems.RAW_RUBY.get(),
+                ModBlocks.RUBY_STONE_GEM.get(), ModBlocks.RUBY_DEEPSLATE_GEM.get());
+
+        List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get(),
+                ModBlocks.SAPPHIRE_STONE_GEM.get(), ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENCHANTED_CRYSTAL.get())
                 .pattern("##")
                 .pattern("##")
@@ -38,6 +44,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         smithingRecipe(pRecipeOutput, RecipeCategory.MISC, ModItems.ENCHANTED_CRYSTAL.get(), Items.IRON_INGOT, Items.EXPERIENCE_BOTTLE, ModItems.ENCHANTED_STEEL.get(), "enchanted_steel");
 
+        oreSmelting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_RUBY.get(), 0.25f, 200, "raw_ruby");
+        oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_RUBY.get(), 0.25f, 100, "raw_ruby");
+
+        oreSmelting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 0.25f, 200, "raw_sapphire");
+        oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 0.25f, 100, "raw_sapphire");
     }
 
     // MAKE SURE FILES ARE GENERATED IN THE RIGHT PLACE

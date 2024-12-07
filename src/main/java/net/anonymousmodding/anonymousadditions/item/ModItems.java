@@ -23,6 +23,8 @@ public class ModItems {
     public static final RegistryObject<Item> CLOUD_IN_A_BOTTLE = ITEMS.register("cloud_in_a_bottle", () -> new CloudInABottleItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RAW_RUBY = ITEMS.register("raw_ruby", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_RUBY = ITEMS.register("polished_ruby", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> POLISHED_SAPPHIRE = ITEMS.register("polished_sapphire", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

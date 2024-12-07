@@ -43,6 +43,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get(), block -> noDrop());
 
         dropOther(ModBlocks.ENCHANTED_CLUSTER.get(), ModItems.ENCHANTED_CRYSTAL.get());
+
+        this.add(ModBlocks.SAPPHIRE_STONE_GEM.get(), block -> createOreDrop(ModBlocks.SAPPHIRE_STONE_GEM.get(), ModItems.RAW_SAPPHIRE.get()));
+
+        this.add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get(), ModItems.RAW_SAPPHIRE.get()));
+
+        this.add(ModBlocks.RUBY_STONE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_STONE_GEM.get(), ModItems.RAW_RUBY.get()));
+
+        this.add(ModBlocks.RUBY_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_DEEPSLATE_GEM.get(), ModItems.RAW_RUBY.get()));
     }
 
     @Override

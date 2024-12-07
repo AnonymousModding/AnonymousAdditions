@@ -24,6 +24,8 @@ public class AdditionsTab {
                 output.accept(ModItems.FLAMING_EMBERS.get());
                 output.accept(ModItems.RAW_RUBY.get());
                 output.accept(ModItems.POLISHED_RUBY.get());
+                output.accept(ModItems.RAW_SAPPHIRE.get());
+                output.accept(ModItems.POLISHED_SAPPHIRE.get());
 
                 // ACCESSORIES
                 output.accept(ModItems.MAGIC_MIRROR.get());
@@ -38,6 +40,10 @@ public class AdditionsTab {
                 output.accept(ModBlocks.ENCHANTED_CLUSTER.get());
                 output.accept(ModBlocks.ENCHANTED_CRYSTAL_BLOCK.get());
                 output.accept(ModBlocks.BUDDING_ENCHANTED_CRYSTAL.get());
+                output.accept(ModBlocks.SAPPHIRE_STONE_GEM.get());
+                output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get());
+                output.accept(ModBlocks.RUBY_STONE_GEM.get());
+                output.accept(ModBlocks.RUBY_DEEPSLATE_GEM.get());
 
             })
             .build());
