@@ -46,7 +46,7 @@ public class ModConfiguredFeatures {
                         BlockStateProvider.simple(Blocks.CALCITE), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(), ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(),
                                 ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(), ModBlocks.ENCHANTED_CLUSTER.get().defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS), new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS), new GeodeLayerSettings(1.7, 2.2, 5.0, 7.0),
                         new GeodeCrackSettings(0.95, 2.0, 2), 0.35, 0.083,
                         true, UniformInt.of(4, 6), UniformInt.of(3, 4),
                         UniformInt.of(1, 2), -16, 16, 0.05, 1));
