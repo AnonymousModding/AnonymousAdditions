@@ -48,6 +48,14 @@ public class AdditionsTab {
                 output.accept(ModBlocks.RUBY_DEEPSLATE_GEM.get());
                 output.accept(ModBlocks.TOPAZ_STONE_GEM.get());
                 output.accept(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
+                output.accept(ModBlocks.PINE_LOG.get());
+                output.accept(ModBlocks.PINE_WOOD.get());
+                output.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                output.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+                output.accept(ModBlocks.PINE_PLANKS.get());
+                output.accept(ModBlocks.PINE_LEAVES.get());
+                output.accept(ModBlocks.PINE_SAPLING.get());
+
 
             })
             .build());

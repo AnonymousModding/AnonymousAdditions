@@ -5,8 +5,11 @@ import net.anonymousmodding.anonymousadditions.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -20,19 +23,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FLAMING_EMBERS_ORE);
 
         blockWithItem(ModBlocks.BUDDING_ENCHANTED_CRYSTAL);
-
         blockWithItem(ModBlocks.ENCHANTED_CRYSTAL_BLOCK);
 
         blockWithItem(ModBlocks.SAPPHIRE_STONE_GEM);
-
         blockWithItem(ModBlocks.SAPPHIRE_DEEPSLATE_GEM);
 
         blockWithItem(ModBlocks.RUBY_STONE_GEM);
-
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_GEM);
 
         blockWithItem(ModBlocks.TOPAZ_STONE_GEM);
-
         blockWithItem(ModBlocks.TOPAZ_DEEPSLATE_GEM);
 
         horizontalBlockWithItem(
@@ -43,12 +42,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
 
         budBlockWithItem(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get(), "small_enchanted_cluster_bud");
-
         budBlockWithItem(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get(), "medium_enchanted_cluster_bud");
-
         budBlockWithItem(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get(), "large_enchanted_cluster_bud");
-
         budBlockWithItem(ModBlocks.ENCHANTED_CLUSTER.get(), "enchanted_cluster");
+
+        logBlock(ModBlocks.PINE_LOG.get());
+        logBlock(ModBlocks.STRIPPED_PINE_LOG.get());
+        axisBlock(ModBlocks.PINE_WOOD.get(), blockTexture(ModBlocks.PINE_LOG.get()), blockTexture(ModBlocks.PINE_LOG.get()));
+        axisBlock(ModBlocks.STRIPPED_PINE_WOOD.get(), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()));
+        blockItem(ModBlocks.PINE_LOG);
+        blockItem(ModBlocks.STRIPPED_PINE_WOOD);
+        blockItem(ModBlocks.PINE_WOOD);
+        blockItem(ModBlocks.STRIPPED_PINE_LOG);
+        blockWithItem(ModBlocks.PINE_PLANKS);
+        saplingBlock(ModBlocks.PINE_SAPLING);
+        leavesBlock(ModBlocks.PINE_LEAVES);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -72,6 +80,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().getBuilder(modelName).parent(models().getExistingFile(modLoc("block/" + modelName)));
     }
 
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("anonymousadditions:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("anonymousadditions:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
 }
 
 

@@ -33,28 +33,30 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.FLAMING_EMBERS_ORE.get(), block -> createMultipleOresDrop(ModBlocks.FLAMING_EMBERS_ORE.get(), ModItems.FLAMING_EMBERS.get(), 2, 5));
 
         dropSelf(ModBlocks.ENCHANTED_CRYSTAL_BLOCK.get());
-
         this.add(ModBlocks.BUDDING_ENCHANTED_CRYSTAL.get(), block -> noDrop());
 
         this.add(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get(), block -> noDrop());
-
         this.add(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get(), block -> noDrop());
-
         this.add(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get(), block -> noDrop());
-
         dropOther(ModBlocks.ENCHANTED_CLUSTER.get(), ModItems.ENCHANTED_CRYSTAL.get());
 
         this.add(ModBlocks.SAPPHIRE_STONE_GEM.get(), block -> createOreDrop(ModBlocks.SAPPHIRE_STONE_GEM.get(), ModItems.RAW_SAPPHIRE.get()));
-
         this.add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get(), ModItems.RAW_SAPPHIRE.get()));
 
         this.add(ModBlocks.RUBY_STONE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_STONE_GEM.get(), ModItems.RAW_RUBY.get()));
-
         this.add(ModBlocks.RUBY_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.RUBY_DEEPSLATE_GEM.get(), ModItems.RAW_RUBY.get()));
 
         this.add(ModBlocks.TOPAZ_STONE_GEM.get(), block -> createOreDrop(ModBlocks.TOPAZ_STONE_GEM.get(), ModItems.RAW_TOPAZ.get()));
-
         this.add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get(), block -> createOreDrop(ModBlocks.TOPAZ_DEEPSLATE_GEM.get(), ModItems.RAW_TOPAZ.get()));
+
+        this.dropSelf(ModBlocks.PINE_LOG.get());
+        this.dropSelf(ModBlocks.PINE_WOOD.get());
+        this.dropSelf(ModBlocks.PINE_PLANKS.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_WOOD.get());
+        this.dropSelf(ModBlocks.PINE_SAPLING.get());
+        this.add(ModBlocks.PINE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

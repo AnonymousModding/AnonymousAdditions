@@ -24,6 +24,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_SAPPHIRE_GEM = registerKey("add_deepslate_sapphire_gem");
     public static final ResourceKey<BiomeModifier> ADD_STONE_TOPAZ_GEM = registerKey("add_stone_topaz_gem");
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_TOPAZ_GEM = registerKey("add_deepslate_topaz_gem");
+    public static final ResourceKey<BiomeModifier> ADD_PINE_TREE = registerKey("add_pine_tree");
 
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -45,11 +46,14 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_DEEPSLATE_RUBY_GEM, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_RUBY_PLACED_KEY)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.DESERT), biomes.getOrThrow(Biomes.BADLANDS), biomes.getOrThrow(Biomes.SAVANNA)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_RUBY_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+
         context.register(ADD_DEEPSLATE_SAPPHIRE_GEM, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_SAPPHIRE_PLACED_KEY)),
+                biomes.getOrThrow(BiomeTags.IS_OCEAN),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_SAPPHIRE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_STONE_TOPAZ_GEM, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -58,13 +62,19 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_DEEPSLATE_TOPAZ_GEM, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_TOPAZ_PLACED_KEY)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA), biomes.getOrThrow(Biomes.TAIGA), biomes.getOrThrow(Biomes.OLD_GROWTH_PINE_TAIGA)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DEEPSLATE_TOPAZ_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_ENCHANTED_CRYSTAL_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ENCHANTED_CRYSTAL_GEODE_PLACED_KEY)),
                 GenerationStep.Decoration.LOCAL_MODIFICATIONS));
+
+        context.register(ADD_PINE_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.PINE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

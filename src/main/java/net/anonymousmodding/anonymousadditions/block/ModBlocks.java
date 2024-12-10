@@ -3,15 +3,19 @@ package net.anonymousmodding.anonymousadditions.block;
 import net.anonymousmodding.anonymousadditions.AnonymousAdditions;
 import net.anonymousmodding.anonymousadditions.block.custom.BuddingEnchantedCrystalBlock;
 import net.anonymousmodding.anonymousadditions.block.custom.EnchantedCrystalClusterBlock;
+import net.anonymousmodding.anonymousadditions.block.custom.ModFlammableRotatedPillar;
 import net.anonymousmodding.anonymousadditions.block.custom.TinkererWorkbenchBlock;
 import net.anonymousmodding.anonymousadditions.item.ModItems;
+import net.anonymousmodding.anonymousadditions.worldgen.tree.ModTreeGrowers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -94,6 +98,57 @@ public class ModBlocks {
                     .strength(4.5f)
                     .sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<RotatedPillarBlock> PINE_LOG = registerBlock("pine_log",
+            () -> new ModFlammableRotatedPillar(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> PINE_WOOD = registerBlock("pine_wood",
+            () -> new ModFlammableRotatedPillar(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WOOD)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
+            () -> new ModFlammableRotatedPillar(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_SPRUCE_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
+            () -> new ModFlammableRotatedPillar(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LOG)));
+
+    public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+    });
+
+    public static final RegistryObject<Block> PINE_LEAVES = registerBlock("pine_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> PINE_SAPLING = registerBlock("pine_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.PINE, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SAPLING)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

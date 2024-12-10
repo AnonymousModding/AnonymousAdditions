@@ -25,5 +25,12 @@
   "block.anonymousadditions.topaz_stone_gem": "Stone Topaz Gem",
   "block.anonymousadditions.topaz_deepslate_gem": "Deepslate Topaz Gem",
   "item.anonymousadditions.raw_topaz": "Raw Topaz",
-  "item.anonymousadditions.polished_topaz": "Polished Topaz"
+  "item.anonymousadditions.polished_topaz": "Polished Topaz",
+  "block.anonymousadditions.pine_log": "Pine Log",
+  "block.anonymousadditions.pine_wood": "Pine Wood",
+  "block.anonymousadditions.stripped_pine_log": "Stripped Pine Log",
+  "block.anonymousadditions.stripped_pine_wood": "Stripped Pine Wood",
+  "block.anonymousadditions.pine_planks": "Pine Planks",
+  "block.anonymousadditions.pine_leaves": "Pine Leaves",
+  "block.anonymousadditions.pine_sapling": "Pine Sapling"
 }

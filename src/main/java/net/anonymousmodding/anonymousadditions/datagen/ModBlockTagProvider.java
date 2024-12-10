@@ -53,5 +53,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get())
                 .add(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get())
                 .add(ModBlocks.ENCHANTED_CLUSTER.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PINE_LOG.get())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get())
+                .add(ModBlocks.PINE_WOOD.get());
     }
 }
