@@ -32,5 +32,12 @@
   "block.anonymousadditions.stripped_pine_wood": "Stripped Pine Wood",
   "block.anonymousadditions.pine_planks": "Pine Planks",
   "block.anonymousadditions.pine_leaves": "Pine Leaves",
-  "block.anonymousadditions.pine_sapling": "Pine Sapling"
+  "block.anonymousadditions.pine_sapling": "Pine Sapling",
+  "block.anonymousadditions.small_omnigeode_cluster": "Small Omni-Geode Cluster",
+  "block.anonymousadditions.medium_omnigeode_cluster": "Medium Omni-Geode Cluster",
+  "block.anonymousadditions.large_omnigeode_cluster": "Large Omni-Geode Cluster",
+  "block.anonymousadditions.omnigeode_cluster": "Omni-Geode Cluster",
+  "block.anonymousadditions.omnigeode_block": "Block of Omni-Geode",
+  "block.anonymousadditions.budding_omnigeode_block": "Budding Omni-Geode",
+  "item.anonymousadditions.omnigeode": "Omni-Geode"
 }

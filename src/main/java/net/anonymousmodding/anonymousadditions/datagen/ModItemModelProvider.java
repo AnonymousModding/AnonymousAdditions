@@ -38,6 +38,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.POLISHED_TOPAZ.get());
 
         saplingItem(ModBlocks.PINE_SAPLING);
+
+        basicItem(ModItems.OMNIGEODE.get());
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

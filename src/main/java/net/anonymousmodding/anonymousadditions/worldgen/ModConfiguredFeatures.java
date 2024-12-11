@@ -39,7 +39,10 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLAMING_EMBERS_ORE_KEY = registerKey("flaming_embers_ore");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_CRYSTAL_GEODE_KEY = registerKey("enchanted_crystal_geode");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OMNIGEODE_GEODE_KEY = registerKey("omnigeode_geode");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_SAPPHIRE_KEY = registerKey("stone_sapphire");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_RUBY_KEY = registerKey("stone_ruby");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_SAPPHIRE_KEY = registerKey("deepslate_sapphire");
@@ -76,6 +79,17 @@ public class ModConfiguredFeatures {
                         BlockStateProvider.simple(Blocks.CALCITE), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(ModBlocks.SMALL_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(), ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(),
                                 ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get().defaultBlockState(), ModBlocks.ENCHANTED_CLUSTER.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS), new GeodeLayerSettings(1.7, 2.2, 6.0, 9.0),
+                        new GeodeCrackSettings(0.95, 2.0, 2), 0.35, 0.083,
+                        true, UniformInt.of(4, 6), UniformInt.of(3, 4),
+                        UniformInt.of(1, 2), -16, 16, 0.05, 1));
+
+        register(context, OMNIGEODE_GEODE_KEY, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(ModBlocks.OMNIGEODE_BLOCK.get()), BlockStateProvider.simple(ModBlocks.BUDDING_OMNIGEODE_BLOCK.get()),
+                        BlockStateProvider.simple(Blocks.CALCITE), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
+                        List.of(ModBlocks.SMALL_OMNIGEODE_CLUSTER.get().defaultBlockState(), ModBlocks.MEDIUM_OMNIGEODE_CLUSTER.get().defaultBlockState(),
+                                ModBlocks.LARGE_OMNIGEODE_CLUSTER.get().defaultBlockState(), ModBlocks.OMNIGEODE_CLUSTER.get().defaultBlockState()),
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS), new GeodeLayerSettings(1.7, 2.2, 6.0, 9.0),
                         new GeodeCrackSettings(0.95, 2.0, 2), 0.35, 0.083,
                         true, UniformInt.of(4, 6), UniformInt.of(3, 4),

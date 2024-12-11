@@ -55,8 +55,13 @@ public class AdditionsTab {
                 output.accept(ModBlocks.PINE_PLANKS.get());
                 output.accept(ModBlocks.PINE_LEAVES.get());
                 output.accept(ModBlocks.PINE_SAPLING.get());
-
-
+                output.accept(ModBlocks.SMALL_OMNIGEODE_CLUSTER.get());
+                output.accept(ModBlocks.MEDIUM_OMNIGEODE_CLUSTER.get());
+                output.accept(ModBlocks.LARGE_OMNIGEODE_CLUSTER.get());
+                output.accept(ModBlocks.OMNIGEODE_CLUSTER.get());
+                output.accept(ModBlocks.OMNIGEODE_BLOCK.get());
+                output.accept(ModBlocks.BUDDING_OMNIGEODE_BLOCK.get());
+                output.accept(ModItems.OMNIGEODE.get());
             })
             .build());
 

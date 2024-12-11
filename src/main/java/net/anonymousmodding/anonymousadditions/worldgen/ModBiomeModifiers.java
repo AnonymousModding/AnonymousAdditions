@@ -17,7 +17,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_FLAMING_EMBERS_ORE = registerKey("add_flaming_embers_ore");
+
     public static final ResourceKey<BiomeModifier> ADD_ENCHANTED_CRYSTAL_GEODE = registerKey("add_enchanted_crystal_geode");
+    public static final ResourceKey<BiomeModifier> ADD_OMNIGEODE_GEODE = registerKey("add_omnigeode_geode");
+
     public static final ResourceKey<BiomeModifier> ADD_STONE_RUBY_GEM = registerKey("add_stone_ruby_gem");
     public static final ResourceKey<BiomeModifier> ADD_STONE_SAPPHIRE_GEM = registerKey("add_stone_sapphire_gem");
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_RUBY_GEM = registerKey("add_deepslate_ruby_gem");
@@ -69,6 +72,11 @@ public class ModBiomeModifiers {
         context.register(ADD_ENCHANTED_CRYSTAL_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ENCHANTED_CRYSTAL_GEODE_PLACED_KEY)),
+                GenerationStep.Decoration.LOCAL_MODIFICATIONS));
+
+        context.register(ADD_OMNIGEODE_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.OMNIGEODE_GEODE_PLACED_KEY)),
                 GenerationStep.Decoration.LOCAL_MODIFICATIONS));
 
         context.register(ADD_PINE_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

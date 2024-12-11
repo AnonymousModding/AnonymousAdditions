@@ -25,6 +25,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BUDDING_ENCHANTED_CRYSTAL);
         blockWithItem(ModBlocks.ENCHANTED_CRYSTAL_BLOCK);
 
+        blockWithItem(ModBlocks.BUDDING_OMNIGEODE_BLOCK);
+        blockWithItem(ModBlocks.OMNIGEODE_BLOCK);
+
         blockWithItem(ModBlocks.SAPPHIRE_STONE_GEM);
         blockWithItem(ModBlocks.SAPPHIRE_DEEPSLATE_GEM);
 
@@ -45,6 +48,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         budBlockWithItem(ModBlocks.MEDIUM_ENCHANTED_CLUSTER_BUD.get(), "medium_enchanted_cluster_bud");
         budBlockWithItem(ModBlocks.LARGE_ENCHANTED_CLUSTER_BUD.get(), "large_enchanted_cluster_bud");
         budBlockWithItem(ModBlocks.ENCHANTED_CLUSTER.get(), "enchanted_cluster");
+
+        budBlockWithItem(ModBlocks.SMALL_OMNIGEODE_CLUSTER.get(), "small_omnigeode_cluster");
+        budBlockWithItem(ModBlocks.MEDIUM_OMNIGEODE_CLUSTER.get(), "medium_omnigeode_cluster");
+        budBlockWithItem(ModBlocks.LARGE_OMNIGEODE_CLUSTER.get(), "large_omnigeode_cluster");
+        budBlockWithItem(ModBlocks.OMNIGEODE_CLUSTER.get(), "omnigeode_cluster");
 
         logBlock(ModBlocks.PINE_LOG.get());
         logBlock(ModBlocks.STRIPPED_PINE_LOG.get());

@@ -27,6 +27,7 @@ public class ModItems {
     public static final RegistryObject<Item> POLISHED_SAPPHIRE = ITEMS.register("polished_sapphire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_TOPAZ = ITEMS.register("raw_topaz", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_TOPAZ = ITEMS.register("polished_topaz", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OMNIGEODE = ITEMS.register("omnigeode", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

@@ -31,7 +31,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get())
                 .add(ModBlocks.SAPPHIRE_STONE_GEM.get())
                 .add(ModBlocks.TOPAZ_STONE_GEM.get())
-                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
+                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get())
+                .add(ModBlocks.OMNIGEODE_BLOCK.get())
+                .add(ModBlocks.BUDDING_OMNIGEODE_BLOCK.get())
+                .add(ModBlocks.SMALL_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.MEDIUM_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.LARGE_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.OMNIGEODE_CLUSTER.get());
 
 
         tag(BlockTags.MINEABLE_WITH_AXE)
@@ -43,7 +49,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_GEM.get())
                 .add(ModBlocks.SAPPHIRE_STONE_GEM.get())
                 .add(ModBlocks.TOPAZ_STONE_GEM.get())
-                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get());
+                .add(ModBlocks.TOPAZ_DEEPSLATE_GEM.get())
+                .add(ModBlocks.OMNIGEODE_BLOCK.get())
+                .add(ModBlocks.BUDDING_OMNIGEODE_BLOCK.get())
+                .add(ModBlocks.SMALL_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.MEDIUM_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.LARGE_OMNIGEODE_CLUSTER.get())
+                .add(ModBlocks.OMNIGEODE_CLUSTER.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLAMING_EMBERS_ORE.get())

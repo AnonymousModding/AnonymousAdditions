@@ -1,10 +1,7 @@
 package net.anonymousmodding.anonymousadditions.block;
 
 import net.anonymousmodding.anonymousadditions.AnonymousAdditions;
-import net.anonymousmodding.anonymousadditions.block.custom.BuddingEnchantedCrystalBlock;
-import net.anonymousmodding.anonymousadditions.block.custom.EnchantedCrystalClusterBlock;
-import net.anonymousmodding.anonymousadditions.block.custom.ModFlammableRotatedPillar;
-import net.anonymousmodding.anonymousadditions.block.custom.TinkererWorkbenchBlock;
+import net.anonymousmodding.anonymousadditions.block.custom.*;
 import net.anonymousmodding.anonymousadditions.item.ModItems;
 import net.anonymousmodding.anonymousadditions.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
@@ -155,6 +152,32 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
+
+    public static final RegistryObject<Block> BUDDING_OMNIGEODE_BLOCK = registerBlock("budding_omnigeode_block",
+            () -> new BuddingOmniGeodeBlock(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.AMETHYST).randomTicks()));
+
+    public static final RegistryObject<Block> OMNIGEODE_BLOCK = registerBlock("omnigeode_block",
+            () -> new Block(BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> OMNIGEODE_CLUSTER = registerBlock(
+            "omnigeode_cluster", () -> new OmniGeodeClusterBlock(7, 3, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GRAY)
+                    .forceSolidOn()
+                    .noOcclusion()
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .strength(0.5F)
+                    .lightLevel(state -> 5)
+                    .pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SMALL_OMNIGEODE_CLUSTER = registerBlock("small_omnigeode_cluster",
+            () -> new OmniGeodeClusterBlock(7, 3, BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.SMALL_AMETHYST_BUD).lightLevel(state -> 1).noOcclusion()));
+
+    public static final RegistryObject<Block> MEDIUM_OMNIGEODE_CLUSTER = registerBlock("medium_omnigeode_cluster",
+            () -> new OmniGeodeClusterBlock(7, 3, BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.MEDIUM_AMETHYST_BUD).lightLevel(state -> 2).noOcclusion()));
+
+    public static final RegistryObject<Block> LARGE_OMNIGEODE_CLUSTER = registerBlock("large_omnigeode_cluster",
+            () -> new OmniGeodeClusterBlock(7, 3, BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.LARGE_AMETHYST_BUD).lightLevel(state -> 4).noOcclusion()));
+
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
