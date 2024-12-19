@@ -28,6 +28,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_STONE_TOPAZ_GEM = registerKey("add_stone_topaz_gem");
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_TOPAZ_GEM = registerKey("add_deepslate_topaz_gem");
     public static final ResourceKey<BiomeModifier> ADD_PINE_TREE = registerKey("add_pine_tree");
+    public static final ResourceKey<BiomeModifier> ADD_SURFACE_BOULDERS = registerKey("add_surface_boulders");
 
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -82,6 +83,11 @@ public class ModBiomeModifiers {
         context.register(ADD_PINE_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST)),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.PINE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_SURFACE_BOULDERS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.SURFACE_BOULDERS_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

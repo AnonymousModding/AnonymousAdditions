@@ -9,6 +9,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -29,6 +30,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> STONE_TOPAZ_PLACED_KEY = registerKey("stone_topaz_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_TOPAZ_PLACED_KEY = registerKey("deepslate_topaz_placed");
     public static final ResourceKey<PlacedFeature> PINE_PLACED_KEY = registerKey("pine_placed");
+    public static final ResourceKey<PlacedFeature> SURFACE_BOULDERS_PLACED_KEY = registerKey("surface_boulders_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -62,6 +64,10 @@ public class ModPlacedFeatures {
 
         register(context, PINE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINE_KEY), VegetationPlacements.treePlacement(PlacementUtils
                 .countExtra(3, 0.1f, 2), ModBlocks.PINE_SAPLING.get()));
+
+        register(context, SURFACE_BOULDERS_PLACED_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.SURFACE_BOULDERS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(20), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

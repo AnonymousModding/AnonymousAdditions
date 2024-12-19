@@ -15,10 +15,7 @@ import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
@@ -49,6 +46,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_RUBY_KEY = registerKey("deepslate_ruby");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_TOPAZ_KEY = registerKey("deepslate_topaz");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_TOPAZ_KEY = registerKey("stone_topaz");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_BOULDERS_KEY = registerKey("surface_boulders");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINE_KEY = registerKey("pine");
 
@@ -103,6 +101,8 @@ public class ModConfiguredFeatures {
                 new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(3)),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, SURFACE_BOULDERS_KEY, ModFeatures.SURFACE_BOULDERS.get(), new NoneFeatureConfiguration());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -3,6 +3,7 @@ package net.anonymousmodding.anonymousadditions.datagen;
 import net.anonymousmodding.anonymousadditions.AnonymousAdditions;
 import net.anonymousmodding.anonymousadditions.worldgen.ModBiomeModifiers;
 import net.anonymousmodding.anonymousadditions.worldgen.ModConfiguredFeatures;
+import net.anonymousmodding.anonymousadditions.worldgen.ModFeatures;
 import net.anonymousmodding.anonymousadditions.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;

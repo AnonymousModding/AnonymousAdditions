@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.anonymousmodding.anonymousadditions.block.ModBlocks;
 import net.anonymousmodding.anonymousadditions.item.AdditionsTab;
 import net.anonymousmodding.anonymousadditions.item.ModItems;
+import net.anonymousmodding.anonymousadditions.worldgen.ModFeatures;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +43,8 @@ public class AnonymousAdditions
         ModBlocks.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModFeatures.FEATURES.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
